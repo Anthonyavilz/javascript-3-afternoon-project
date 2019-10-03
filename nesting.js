@@ -52,6 +52,34 @@ var employees = [
 
 //Code Here
 
+// let employeeUpdater = employees.filter(function(element){
+//   if (element.firstName === 'Theo') {
+//     return element
+//   } else if (element.firstName === 'Lorie') {
+//     return element.department = 'HR'
+//   }
+// }
+
+// function employeeUpdater(){
+//   let employeeUpdater = []
+//   for (let key in employees){
+//     if (employees[key] === 'Theo');
+//     delete employees[key];
+//   // } return employees.push(employeeUpdater)
+// }
+
+function employeeUpdater(){
+  for(var i=0; i<employees.length; i++){
+  if (employees[i].firstName === 'Theo'){
+    employees.splice(i,1)
+  } else {
+    if (employees[i].firstName === 'Lorie'){
+    employees[i].department = 'HR'
+  }}
+}
+return employees;
+}
+
 
 
 ////////// PROBLEM 2 //////////
@@ -70,8 +98,14 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
-
-
+function removeDuplicates(){
+  for (i=workplaceAccidents.length -1; i >= 0; i--){
+    if (workplaceAccidents.indexOf(workplaceAccidents[i]) !== i){
+      workplaceAccidents.splice(i,1)
+    } 
+  }
+    return workplaceAccidents
+  }
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.
